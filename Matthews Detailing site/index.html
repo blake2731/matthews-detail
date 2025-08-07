@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew's Detail Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { opacity: 0; transform: translateY(1rem); transition: all .6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="font-sans text-gray-100 bg-gray-900">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-75 backdrop-blur z-50">
+    <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <img src="assets/logo.png" alt="Matthew's Detail Service" class="h-10" />
+      <nav class="space-x-6 uppercase text-sm">
+        <a href="#services" class="hover:text-red-500">Services</a>
+        <a href="#testimonials" class="hover:text-red-500">Testimonials</a>
+        <a href="#contact" class="hover:text-red-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="h-screen bg-center bg-cover" style="background-image:url('assets/hero.jpg')">
+    <div class="h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4">
+      <h1 class="text-5xl md:text-6xl font-bold uppercase tracking-wider mb-4">
+        Mobile RV &amp; Auto Detailing
+      </h1>
+      <p class="text-xl mb-8">20 yrs experience — Highland, CA</p>
+      <a href="#contact" class="px-8 py-3 bg-red-500 hover:bg-white hover:text-red-500 text-white font-semibold rounded-full transition">
+        Request a Free Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="max-w-5xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-12">Our Services</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+        <img src="icons/icon-wash.svg" class="h-12 mb-4" alt="Hand Wash" />
+        <h3 class="font-semibold text-xl mb-2">Hand Wash</h3>
+        <p class="text-sm">Gentle &amp; thorough exterior cleaning.</p>
+      </div>
+
+      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+        <img src="icons/icon-paint.svg" class="h-12 mb-4" alt="Paint Correction" />
+        <h3 class="font-semibold text-xl mb-2">Paint Correction</h3>
+        <p class="text-sm">Restore your finish to showroom shine.</p>
+      </div>
+
+      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+        <img src="icons/icon-interior.svg" class="h-12 mb-4" alt="Interior Detailing" />
+        <h3 class="font-semibold text-xl mb-2">Interior Deep-Clean</h3>
+        <p class="text-sm">Vacuum, shampoo &amp; sanitize interior.</p>
+      </div>
+
+      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+        <img src="icons/icon-headlight.svg" class="h-12 mb-4" alt="Headlight Restoration" />
+        <h3 class="font-semibold text-xl mb-2">Headlight Restoration</h3>
+        <p class="text-sm">Clear foggy lenses for safety &amp; style.</p>
+      </div>
+
+      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+        <img src="icons/icon-engine.svg" class="h-12 mb-4" alt="Engine Cleaning" />
+        <h3 class="font-semibold text-xl mb-2">Engine Cleaning</h3>
+        <p class="text-sm">Degrease &amp; detail under the hood.</p>
+      </div>
+
+      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+        <img src="icons/icon-window.svg" class="h-12 mb-4" alt="Window Cleaning" />
+        <h3 class="font-semibold text-xl mb-2">Window Cleaning</h3>
+        <p class="text-sm">Streak-free clarity inside &amp; out.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="bg-gray-800 py-16 px-4">
+    <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-12">What Clients Say</h2>
+    <div class="max-w-3xl mx-auto space-y-12">
+      <blockquote class="fade-in">
+        <p class="text-xl italic mb-4">
+          “It looks like a brand-new truck! Not a stain in sight. Highly recommend.”
+        </p>
+        <footer class="text-sm uppercase">
+          — Isomer I., San Diego (Jul 27, 2025)
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="max-w-2xl mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-8">Get Your Quote</h2>
+    <form class="space-y-6">
+      <input type="text" placeholder="Name" required class="w-full p-3 rounded bg-gray-700" />
+      <input type="email" placeholder="Email" required class="w-full p-3 rounded bg-gray-700" />
+      <input type="tel" placeholder="Phone" required class="w-full p-3 rounded bg-gray-700" />
+      <input type="text" placeholder="Vehicle Make &amp; Model" required class="w-full p-3 rounded bg-gray-700" />
+      <select required class="w-full p-3 rounded bg-gray-700">
+        <option value="">Service Needed</option>
+        <option>Exterior Detailing</option>
+        <option>Interior Deep-Clean</option>
+        <option>Paint Correction</option>
+      </select>
+      <input type="date" class="w-full p-3 rounded bg-gray-700" />
+      <button type="submit" class="w-full py-3 bg-red-500 hover:bg-white hover:text-red-500 rounded-full font-semibold transition">
+        Send Request
+      </button>
+    </form>
+    <div class="mt-8 text-center text-gray-400 space-y-1">
+      <p>📞 909-763-8914</p>
+      <p>✉️ SAlexander420@gmail.com</p>
+      <p>🕒 Mon–Sat 9 AM–6 PM</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 text-center text-gray-500">
+    <p class="italic mb-2">“Don’t let people practice on your car!”</p>
+    <a href="https://yelp.com/biz/matthews-detail-highland" target="_blank" class="hover:text-red-500">
+      Read more reviews on Yelp
+    </a>
+    <p class="mt-4 text-xs">&copy; 2025 Matthew’s Detail Service</p>
+  </footer>
+
+  <!-- Fade-in JS -->
+  <script>
+    const els = document.querySelectorAll('.fade-in');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting && e.target.classList.add('visible'));
+    }, { threshold: .1 });
+    els.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

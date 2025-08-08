@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- bug body -->
+  <ellipse cx="32" cy="32" rx="10" ry="14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></ellipse>
+  <!-- bug head -->
+  <circle cx="32" cy="18" r="4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"></circle>
+  <!-- legs (3 per side) -->
+  <g stroke="#fff" stroke-width="2" stroke-linecap="round">
+    <line x1="22" y1="30" x2="14" y2="26"></line>
+    <line x1="22" y1="34" x2="14" y2="34"></line>
+    <line x1="22" y1="38" x2="14" y2="42"></line>
+    <line x1="42" y1="30" x2="50" y2="26"></line>
+    <line x1="42" y1="34" x2="50" y2="34"></line>
+    <line x1="42" y1="38" x2="50" y2="42"></line>
+  </g>
+  <!-- antennae -->
+  <g stroke="#fff" stroke-width="2" stroke-linecap="round">
+    <line x1="28" y1="14" x2="22" y2="8"></line>
+    <line x1="36" y1="14" x2="42" y2="8"></line>
+  </g>
+  <!-- sap drops -->
+  <path d="M48,50 c0,-4 -4,-4 -4,0 s4,4 4,0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M18,52 c0,-3 -3,-3 -3,0 s3,3 3,0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+</svg>

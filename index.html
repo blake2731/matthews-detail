@@ -3,22 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matthew's Detail Service</title>
+  <title>Mobile RV &amp; Auto Detailing in Highland, CA | Matthew’s Detail Service</title>
+  <meta name="description" 
+  content="Mobile RV & Auto Detailing in Highland, CA – 20 years’ experience. Call 909-763-8914 for a free, on-site quote today!" />
+  <meta name="keywords" 
+  content="Highland CA mobile detailing, RV detailing, auto detailing, window cleaning, upholstery cleaning" />
+
+  <link rel="canonical" href="https://matthewsdetail.com/" />
+  <!-- 5. OPEN GRAPH & TWITTER CARDS:  
+       Helps with link previews on social & messaging apps -->
+  <meta property="og:title"        content="Mobile RV & Auto Detailing in Highland, CA | Matthew’s Detail Service" />
+  <meta property="og:description"  content="20 years’ experience—book your free RV or auto detail quote today!" />
+  <meta property="og:url"          content="https://matthewsdetail.com/" />
+  <meta property="og:image"        content="https://matthewsdetail.com/assets/hero.jpg" />
+  <meta name="twitter:card"        content="summary_large_image" />
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Matthew’s Detail Service",
+    "image": "https://YOURDOMAIN.com/assets/logo.png",
+    "telephone": "909-763-8914",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "YOUR STREET ADDRESS",
+      "addressLocality": "Highland",
+      "addressRegion": "CA",
+      "postalCode": "92346",
+      "addressCountry": "US"
+    },
+    "openingHours": [ "Mo-Sa 09:00-18:00" ],
+    "url": "https://matthewsdetail.com/",
+    "priceRange": "$$"
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .fade-in { opacity: 0; transform: translateY(1rem); transition: all .6s ease-out; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-  </style>
+<style type="text/tailwindcss">
+  .fade-in {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all .6s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @layer components {
+    .service-card {
+      @apply flex items-center p-3 bg-gray-700 rounded-lg
+             cursor-pointer hover:bg-gray-600 transition;
+    }
+    .service-card-valid {
+      @apply bg-green-600 hover:bg-green-500;
+    }
+  }
+
+  @layer components {
+  .valid-input {
+    @apply focus:ring-green-400;
+  }
+}
+</style>
+
 </head>
 <body class="font-sans text-gray-100 bg-gray-900">
 
   <!-- Header -->
   <header class="fixed top-0 w-full bg-gray-900 bg-opacity-75 backdrop-blur z-50">
     <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
-      <img src="assets/logo.png" alt="Matthew's Detail Service" class="h-10" />
+      <img src="assets/logo.png" alt="Matthew's Detail Service" class="h-12" />
+      <h2 class="text-xl font-bold uppercase text-red-500">Matthew’s Detail Service</h2>
       <nav class="space-x-6 uppercase text-sm">
         <a href="#services" class="hover:text-red-500">Services</a>
         <a href="#testimonials" class="hover:text-red-500">Testimonials</a>
+        <a href="#gallery" class="hover:text-red-500">Gallery</a>
         <a href="#contact" class="hover:text-red-500">Contact</a>
       </nav>
     </div>
@@ -39,105 +98,250 @@
 
   <!-- Services -->
   <section id="services" class="max-w-5xl mx-auto py-16 px-4">
-    <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-12">Our Services</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-12">Our Services</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
-        <img src="icons/icon-wash.svg" class="h-12 mb-4" alt="Hand Wash" />
-        <h3 class="font-semibold text-xl mb-2">Hand Wash</h3>
-        <p class="text-sm">Gentle &amp; thorough exterior cleaning.</p>
-      </div>
+    <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+      <img src="icons/rv-auto-hand-wash-icon.svg"
+           class="h-12 mb-4"
+           alt="RV & Auto Hand Wash icon" />
+      <h3 class="font-semibold text-xl mb-2">Hand Wash</h3>
+      <p class="text-sm">Gentle &amp; thorough exterior cleaning.</p>
+    </div>
 
-      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
-        <img src="icons/icon-paint.svg" class="h-12 mb-4" alt="Paint Correction" />
-        <h3 class="font-semibold text-xl mb-2">Paint Correction</h3>
-        <p class="text-sm">Restore your finish to showroom shine.</p>
-      </div>
+    <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+      <img src="icons/rv-auto-interior-deep-clean-icon.svg"
+           class="h-12 mb-4"
+           alt="RV & Auto Interior Deep Clean icon" />
+      <h3 class="font-semibold text-xl mb-2">Interior Deep-Clean</h3>
+      <p class="text-sm">Vacuum, shampoo &amp; sanitize interior.</p>
+    </div>
 
-      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
-        <img src="icons/icon-interior.svg" class="h-12 mb-4" alt="Interior Detailing" />
-        <h3 class="font-semibold text-xl mb-2">Interior Deep-Clean</h3>
-        <p class="text-sm">Vacuum, shampoo &amp; sanitize interior.</p>
-      </div>
+    <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+      <img src="icons/headlight-restoration-icon.svg"
+           class="h-12 mb-4"
+           alt="Headlight Restoration icon" />
+      <h3 class="font-semibold text-xl mb-2">Headlight Restoration</h3>
+      <p class="text-sm">Clear foggy lenses for safety &amp; style.</p>
+    </div>
 
-      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
-        <img src="icons/icon-headlight.svg" class="h-12 mb-4" alt="Headlight Restoration" />
-        <h3 class="font-semibold text-xl mb-2">Headlight Restoration</h3>
-        <p class="text-sm">Clear foggy lenses for safety &amp; style.</p>
-      </div>
+    <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+      <img src="icons/window-cleaning-icon.svg"
+           class="h-12 mb-4"
+           alt="Window Cleaning icon" />
+      <h3 class="font-semibold text-xl mb-2">Window Cleaning</h3>
+      <p class="text-sm">Streak-free clarity inside &amp; out.</p>
+    </div>
 
-      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
-        <img src="icons/icon-engine.svg" class="h-12 mb-4" alt="Engine Cleaning" />
-        <h3 class="font-semibold text-xl mb-2">Engine Cleaning</h3>
-        <p class="text-sm">Degrease &amp; detail under the hood.</p>
-      </div>
+    <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+      <img src="icons/upholstery-cleaning-icon.svg"
+           class="h-12 mb-4"
+           alt="Upholstery Cleaning icon" />
+      <h3 class="font-semibold text-xl mb-2">Upholstery Cleaning</h3>
+      <p class="text-sm">Carpet &amp; upholstery deep-clean.</p>
+    </div>
 
-      <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
-        <img src="icons/icon-window.svg" class="h-12 mb-4" alt="Window Cleaning" />
-        <h3 class="font-semibold text-xl mb-2">Window Cleaning</h3>
-        <p class="text-sm">Streak-free clarity inside &amp; out.</p>
-      </div>
+    <div class="fade-in flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl">
+      <img src="icons/bug-and-sap-removal-icon.svg"
+           class="h-12 mb-4"
+           alt="Bug & Sap Removal icon" />
+      <h3 class="font-semibold text-xl mb-2">Bug &amp; Sap Removal</h3>
+      <p class="text-sm">Remove stubborn bugs &amp; sap spots.</p>
+    </div>
 
+  </div>
+</section>
+
+
+  <!-- Gallery -->
+  <section id="gallery" class="bg-gray-800 py-16 px-4">
+    <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-12">Recent Work</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <img src="assets/RV.png" alt="Detailed RV" class="w-full rounded-lg shadow-lg" />
+      <img src="assets/Truck.png" alt="Detailed Truck" class="w-full rounded-lg shadow-lg" />
+      <img src="assets/Toyota.png" alt="Detailed Car" class="w-full rounded-lg shadow-lg" />
+      <img src="assets/silver.png" alt="Detailed Sedan" class="w-full rounded-lg shadow-lg" />
+      <img src="assets/interior.png" alt="Interior Detailing" class="w-full rounded-lg shadow-lg" />
+      <img src="assets/rubicon.jpg" alt="Detailed Rubicon" class="w-full rounded-lg shadow-lg" />
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" class="bg-gray-800 py-16 px-4">
+  <section id="testimonials" class="py-16 px-4">
     <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-12">What Clients Say</h2>
     <div class="max-w-3xl mx-auto space-y-12">
-      <blockquote class="fade-in">
-        <p class="text-xl italic mb-4">
-          “It looks like a brand-new truck! Not a stain in sight. Highly recommend.”
-        </p>
-        <footer class="text-sm uppercase">
-          — Isomer I., San Diego (Jul 27, 2025)
-        </footer>
+      <blockquote class="fade-in bg-gray-800 p-6 rounded-lg">
+        <p class="text-xl italic mb-4">“Excellent work! Matthew came out at the last minute to detail a very dirty Toyota Tacoma... It looks like a brand new truck! Not a stain in sight. Highly recommend.”</p>
+        <footer class="text-sm uppercase">— Isomer I., San Diego (Jul 27, 2025)</footer>
       </blockquote>
+
+      <a href="https://yelp.com/biz/matthews-detail-highland" target="_blank" class="hover:text-red-500">Read more reviews on Yelp</a>
     </div>
   </section>
 
   <!-- Contact Form -->
-  <section id="contact" class="max-w-2xl mx-auto py-16 px-4">
+   <section id="contact" class="max-w-2xl mx-auto py-16 px-4"
+         itemscope itemtype="http://schema.org/LocalBusiness">
     <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-8">Get Your Quote</h2>
     <form class="space-y-6">
       <input type="text" placeholder="Name" required class="w-full p-3 rounded bg-gray-700" />
       <input type="email" placeholder="Email" required class="w-full p-3 rounded bg-gray-700" />
       <input type="tel" placeholder="Phone" required class="w-full p-3 rounded bg-gray-700" />
       <input type="text" placeholder="Vehicle Make &amp; Model" required class="w-full p-3 rounded bg-gray-700" />
-      <select required class="w-full p-3 rounded bg-gray-700">
-        <option value="">Service Needed</option>
-        <option>Exterior Detailing</option>
-        <option>Interior Deep-Clean</option>
-        <option>Paint Correction</option>
-      </select>
-      <input type="date" class="w-full p-3 rounded bg-gray-700" />
-      <button type="submit" class="w-full py-3 bg-red-500 hover:bg-white hover:text-red-500 rounded-full font-semibold transition">
-        Send Request
-      </button>
-    </form>
-    <div class="mt-8 text-center text-gray-400 space-y-1">
-      <p>📞 909-763-8914</p>
-      <p>✉️ SAlexander420@gmail.com</p>
-      <p>🕒 Mon–Sat 9 AM–6 PM</p>
-    </div>
-  </section>
+      <fieldset>
+        <legend class="block mb-2 font-medium">Services Needed</legend>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <label class="service-card">
+            <input
+              type="checkbox"
+              name="services[]"
+              value="exterior"
+              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
+            />
+            <span class="ml-3">Exterior Detailing</span>
+          </label>
+          <label class="service-card">
+            <input
+              type="checkbox"
+              name="services[]"
+              value="interior"
+              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
+            />
+            <span class="ml-3">Interior Deep-Clean</span>
+          </label>
+          <label class="service-card">
+            <input
+              type="checkbox"
+              name="services[]"
+              value="upholstery"
+              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
+            />
+            <span class="ml-3">Upholstery Cleaning</span>
+          </label>
+          <label class="service-card">
+            <input
+              type="checkbox"
+              name="services[]"
+              value="window"
+              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
+            />
+            <span class="ml-3">Window Cleaning</span>
+          </label>
+          <label class="service-card">
+            <input
+              type="checkbox"
+              name="services[]"
+              value="bug_sap_removal"
+              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
+            />
+            <span class="ml-3">Bug &amp; Sap Removal</span>
+          </label>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 py-6 text-center text-gray-500">
-    <p class="italic mb-2">“Don’t let people practice on your car!”</p>
-    <a href="https://yelp.com/biz/matthews-detail-highland" target="_blank" class="hover:text-red-500">
-      Read more reviews on Yelp
-    </a>
-    <p class="mt-4 text-xs">&copy; 2025 Matthew’s Detail Service</p>
-  </footer>
+          <label class="service-card">
+            <input
+              id="service-other"
+              type="checkbox"
+              name="services[]"
+              value="other"
+              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
+            />
+            <span class="ml-3">Other</span>
+             <input
+        id="other-text"
+        name="services_other"
+        type="text"
+        disabled
+        placeholder="Please specify"
+        class="ml-3 flex-1 p-2 rounded bg-gray-800 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-red-400"
+      />
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Date Picker -->
+      <input type="date" class="w-full p-3 rounded bg-gray-700" />
+      <button type="submit" class="w-full py-3 bg-red-500 hover:bg-white hover:text-red-500 rounded-full font-semibold transition">Send Request</button>
+    </form>
+  
+
+  <!-- SEO-optimized contact info without physical address -->
+  <div class="mt-8 text-center text-gray-400 space-y-1">
+    <p>
+      📞
+      <a href="tel:+19097638914" itemprop="telephone">
+        909-763-8914
+      </a>
+    </p>
+    <p>
+      ✉️
+      <a href="mailto:SAlexander420@gmail.com" itemprop="email">
+        SAlexander420@gmail.com
+      </a>
+    </p>
+    <p>
+      🌐 Service area:
+      <span itemprop="areaServed">Highland, CA & surrounding</span>
+    </p>
+    <p>
+      🕒
+      <time itemprop="openingHours" datetime="Mo-Sa 09:00-18:00">
+        Mon–Sat 9 AM–6 PM
+      </time>
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 py-6 text-center text-gray-500"
+        itemscope itemtype="http://schema.org/LocalBusiness">
+  <p class="italic mb-2" itemprop="slogan">
+    “Don’t let people practice on your car!”
+  </p>
+  <a href="https://yelp.com/biz/matthews-detail-highland"
+     target="_blank"
+     class="hover:text-red-500"
+     itemprop="review">
+    Read more reviews on Yelp
+  </a>
+  <p class="mt-4 text-xs">
+    &copy; <span itemprop="foundingDate">2025</span>
+    <span itemprop="name">Matthew’s Detail Service</span>
+  </p>
+</footer>
+
 
   <!-- Fade-in JS -->
   <script>
-    const els = document.querySelectorAll('.fade-in');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => e.isIntersecting && e.target.classList.add('visible'));
-    }, { threshold: .1 });
-    els.forEach(el => io.observe(el));
+    document.querySelectorAll('.fade-in').forEach(el => {
+      new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && el.classList.add('visible')), { threshold: .1 }).observe(el);
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+    const chk = document.getElementById('service-other');
+    const txt = document.getElementById('other-text');
+    const card = chk.closest('label');
+
+    // toggle textbox enable/disable
+    chk.addEventListener('change', () => {
+      txt.disabled = !chk.checked;
+      if (chk.checked) {
+        txt.focus();
+      } else {
+        txt.value = '';
+        card.classList.remove('service-card-valid');
+      }
+    });
+
+    // toggle green class when there's text
+    txt.addEventListener('input', () => {
+      const hasText = txt.value.trim().length > 0;
+      txt.classList.toggle('focus:ring-red-400', !hasText);
+      txt.classList.toggle('valid-input', hasText);
+    });
+  });
+    
   </script>
+  
+
 </body>
 </html>
+

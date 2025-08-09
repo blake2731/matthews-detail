@@ -173,114 +173,73 @@
   </section>
 
   <!-- Contact Form -->
-   <section id="contact" class="max-w-2xl mx-auto py-16 px-4"
+<section id="contact" class="max-w-2xl mx-auto py-16 px-4"
          itemscope itemtype="http://schema.org/LocalBusiness">
-    <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-8">Get Your Quote</h2>
-    <form class="space-y-6">
-      <input type="text" placeholder="Name" required class="w-full p-3 rounded bg-gray-700" />
-      <input type="email" placeholder="Email" required class="w-full p-3 rounded bg-gray-700" />
-      <input type="tel" placeholder="Phone" required class="w-full p-3 rounded bg-gray-700" />
-      <input type="text" placeholder="Vehicle Make &amp; Model" required class="w-full p-3 rounded bg-gray-700" />
-      <fieldset>
-        <legend class="block mb-2 font-medium">Services Needed</legend>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <label class="service-card">
-            <input
-              type="checkbox"
-              name="services[]"
-              value="exterior"
-              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
-            />
-            <span class="ml-3">Exterior Detailing</span>
-          </label>
-          <label class="service-card">
-            <input
-              type="checkbox"
-              name="services[]"
-              value="interior"
-              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
-            />
-            <span class="ml-3">Interior Deep-Clean</span>
-          </label>
-          <label class="service-card">
-            <input
-              type="checkbox"
-              name="services[]"
-              value="upholstery"
-              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
-            />
-            <span class="ml-3">Upholstery Cleaning</span>
-          </label>
-          <label class="service-card">
-            <input
-              type="checkbox"
-              name="services[]"
-              value="window"
-              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
-            />
-            <span class="ml-3">Window Cleaning</span>
-          </label>
-          <label class="service-card">
-            <input
-              type="checkbox"
-              name="services[]"
-              value="bug_sap_removal"
-              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
-            />
-            <span class="ml-3">Bug &amp; Sap Removal</span>
-          </label>
+  <h2 class="text-3xl font-bold uppercase tracking-wider text-center mb-8">Get Your Quote</h2>
 
-          <label class="service-card">
-            <input
-              id="service-other"
-              type="checkbox"
-              name="services[]"
-              value="other"
-              class="h-5 w-5 text-red-500 rounded focus:ring-red-400"
-            />
-            <span class="ml-3">Other</span>
-             <input
-        id="other-text"
-        name="services_other"
-        type="text"
-        disabled
-        placeholder="Please specify"
-        class="ml-3 flex-1 p-2 rounded bg-gray-800 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-red-400"
-      />
-          </label>
-        </div>
-      </fieldset>
+  <!-- status message -->
+  <p id="form-msg" class="hidden mb-4 text-center"></p>
 
-      <!-- Date Picker -->
-      <input type="date" class="w-full p-3 rounded bg-gray-700" />
-      <button type="submit" class="w-full py-3 bg-red-500 hover:bg-white hover:text-red-500 rounded-full font-semibold transition">Send Request</button>
-    </form>
-  
+  <form id="contact-form"
+        action="https://script.google.com/macros/s/AKfycbxtpEqZXQaSh2EvRBRVg2qbCWs7s1vMfSlHX-ygjAJHJurrKLdPbmaOs4Oqy0DnYXT6/exec"
+        method="POST"
+        class="space-y-6">
+
+    <input type="text"  name="name"    placeholder="Name"                    required class="w-full p-3 rounded bg-gray-700" />
+    <input type="email" name="email"   placeholder="Email"                   required class="w-full p-3 rounded bg-gray-700" />
+    <input type="tel"   name="phone"   placeholder="Phone"                   required class="w-full p-3 rounded bg-gray-700" />
+    <input type="text"  name="vehicle" placeholder="Vehicle Make &amp; Model" required class="w-full p-3 rounded bg-gray-700" />
+
+    <fieldset>
+      <legend class="block mb-2 font-medium">Services Needed</legend>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <label class="service-card">
+          <input type="checkbox" name="services[]" value="exterior" class="h-5 w-5 text-red-500 rounded focus:ring-red-400" />
+          <span class="ml-3">Exterior Detailing</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services[]" value="interior" class="h-5 w-5 text-red-500 rounded focus:ring-red-400" />
+          <span class="ml-3">Interior Deep-Clean</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services[]" value="upholstery" class="h-5 w-5 text-red-500 rounded focus:ring-red-400" />
+          <span class="ml-3">Upholstery Cleaning</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services[]" value="window" class="h-5 w-5 text-red-500 rounded focus:ring-red-400" />
+          <span class="ml-3">Window Cleaning</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services[]" value="bug_sap_removal" class="h-5 w-5 text-red-500 rounded focus:ring-red-400" />
+          <span class="ml-3">Bug &amp; Sap Removal</span>
+        </label>
+
+        <label class="service-card">
+          <input id="service-other" type="checkbox" name="services[]" value="other"
+                 class="h-5 w-5 text-red-500 rounded focus:ring-red-400" />
+          <span class="ml-3">Other</span>
+          <input id="other-text" name="services_other" type="text" disabled placeholder="Please specify"
+                 class="ml-3 flex-1 p-2 rounded bg-gray-800 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-red-400" />
+        </label>
+      </div>
+    </fieldset>
+
+    <input type="date" name="date" class="w-full p-3 rounded bg-gray-700" />
+
+    <!-- spam honeypot -->
+    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+    <button type="submit" class="w-full py-3 bg-red-500 hover:bg-white hover:text-red-500 rounded-full font-semibold transition">
+      Send Request
+    </button>
+  </form>
 
   <!-- SEO-optimized contact info without physical address -->
   <div class="mt-8 text-center text-gray-400 space-y-1">
-    <p>
-      📞
-      <a href="tel:+19097638914" itemprop="telephone">
-        909-763-8914
-      </a>
-    </p>
-    <p>
-      ✉️
-      <a href="mailto:MatthewSAlexander420@gmail.com" itemprop="email">
-        MatthewSAlexander420@gmail.com
-      </a>
-    </p>
-    <p>
-      🌐 Service area:
-      <span itemprop="areaServed">Highland, CA & surrounding</span>
-    </p>
-    <p>
-      🕒
-      <time itemprop="openingHours" datetime="Mo-Sa 09:00-18:00">
-        Mon–Sat 9 AM–6 PM
-      </time>
-    </p>
+    <p>📞 <a href="tel:+19097638914" itemprop="telephone">909-763-8914</a></p>
+    <p>✉️ <a href="mailto:MatthewSAlexander420@gmail.com" itemprop="email">MatthewSAlexander420@gmail.com</a></p>
+    <p>🌐 Service area: <span itemprop="areaServed">Highland, CA &amp; surrounding</span></p>
+    <p>🕒 <time itemprop="openingHours" datetime="Mo-Sa 09:00-18:00">Mon–Sat 9 AM–6 PM</time></p>
   </div>
 </section>
 
@@ -337,4 +296,5 @@
 
 </body>
 </html>
+
 

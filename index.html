@@ -262,39 +262,73 @@
 </footer>
 
 
-  <!-- Fade-in JS -->
-  <script>
-    document.querySelectorAll('.fade-in').forEach(el => {
-      new IntersectionObserver(entries => entries.forEach(e => e.isIntersecting && el.classList.add('visible')), { threshold: .1 }).observe(el);
-    });
-    document.addEventListener('DOMContentLoaded', () => {
+<!-- Fade-in + form submission JS -->
+<script>
+  // Fade-in effect
+  document.querySelectorAll('.fade-in').forEach(el => {
+    new IntersectionObserver(
+      entries => entries.forEach(e => e.isIntersecting && el.classList.add('visible')),
+      { threshold: 0.1 }
+    ).observe(el);
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Handle "Other" service toggle
     const chk = document.getElementById('service-other');
     const txt = document.getElementById('other-text');
-    const card = chk.closest('label');
+    const card = chk?.closest('label');
 
-    // toggle textbox enable/disable
-    chk.addEventListener('change', () => {
+    chk?.addEventListener('change', () => {
       txt.disabled = !chk.checked;
       if (chk.checked) {
         txt.focus();
       } else {
         txt.value = '';
-        card.classList.remove('service-card-valid');
+        card?.classList.remove('service-card-valid');
       }
     });
 
-    // toggle green class when there's text
-    txt.addEventListener('input', () => {
+    txt?.addEventListener('input', () => {
       const hasText = txt.value.trim().length > 0;
       txt.classList.toggle('focus:ring-red-400', !hasText);
       txt.classList.toggle('valid-input', hasText);
     });
+
+    // Form submission handler
+    const form = document.getElementById('contact-form');
+    const msg  = document.getElementById('form-msg');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.className = "mb-4 text-center";
+      msg.textContent = "Sending…";
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { "Accept": "application/json" }
+        });
+
+        if (res.ok) {
+          form.reset();
+          msg.className = "mb-4 text-center text-green-400";
+          msg.textContent = "Thanks! We got your request and will reach out ASAP.";
+        } else {
+          throw new Error('Bad response');
+        }
+      } catch (err) {
+        msg.className = "mb-4 text-center text-red-400";
+        msg.textContent = "Error sending. Try again or call 909-763-8914.";
+      }
+    });
   });
-    
-  </script>
+</script>
+
   
 
 </body>
 </html>
+
 
 
